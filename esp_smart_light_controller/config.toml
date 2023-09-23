@@ -1,19 +1,11 @@
+
 esp_toml_version = 1.0
+firmware_images_url = "https://lisir233.github.io/esp_smart_light_controller/bin/"
 
-# This should be a publicly accessible URL of the file server where your firmware binaries are available for download
-firmware_images_url = "<https://lisir233.github.io/esp_smart_light_controller/bin>"
+supported_apps = ["switch panda"]
 
-# Apps that you support and for which the binaries are available to publish. You can have multiple apps as a comma separated list
-# The launch pad UI will automatically show these Apps in the available apps dropdown
-# There should be a config section per listed App
-supported_apps = ["ESP32C3_SMART_LIGHT_CONTROLLER"]
-
-
-[YOUR_FIRMWARE_APP_NAME]
-# ESP32 Chipsets for which you have a supported Firmware App. Define a property for each supported chipset in the given format.
-chipsets = ["ESP32-C3"]
-# Configure the name of the binary file
-image.esp32-c3 = "esp32c3_switch_v1_0.bin"
-# Optional: Phone APP URLs if any for Playstores
+[switch panda]
+chipsets = ["ESP32C3"]
+image.esp32c3 = "esp32c3_switch_v1_0.bin"
+ios_app_url = "https://apps.apple.com/app/esp-rainmaker/id1497491540"
 android_app_url = ""
-ios_app_url = ""
